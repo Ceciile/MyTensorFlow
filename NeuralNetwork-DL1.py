@@ -79,6 +79,7 @@ print("loss: ", loss)
 print("predicted_labels: ", correct_pred)
 
 #initialized session to start epochs or training loops
+
 tf.set_random_seed(1234)
 sess = tf.Session()
 
@@ -89,4 +90,15 @@ for i in range(201):
         _, accuracy_val = sess.run([train_op, accuracy], feed_dict={x: images28, y: labels})###run_metadata_ptr  ValueError: Cannot feed value of shape (4575, 28, 3) for Tensor u'Placeholder:0', which has shape '(?, 28, 28)'
         if i % 10 == 0:
             print("Loss: ", loss)
+'''
+tf.set_random_seed(1234)
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    for i in range(201):
+        _, loss_value = sess.run([train_op, loss], feed_dict={x: images28, y: labels})
+        if i % 10 == 0:
+            print("Loss: ", loss)
+#2018-02-07 16:31:25.574487: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+'''
         print('DONE WITH EPOCH')
