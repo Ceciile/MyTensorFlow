@@ -1,0 +1,899 @@
+~/tensorflow/project/Recommendation/WideDeep$ python wide_deep.py
+INFO:tensorflow:Using config: {'_save_checkpoints_secs': 600, '_session_config': device_count {
+  key: "GPU"
+}
+, '_keep_checkpoint_max': 5, '_task_type': 'worker', '_is_chief': True, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f10c3f23690>, '_save_checkpoints_steps': None, '_keep_checkpoint_every_n_hours': 10000, '_service': None, '_num_ps_replicas': 0, '_tf_random_seed': None, '_master': '', '_num_worker_replicas': 1, '_task_id': 0, '_log_step_count_steps': 100, '_model_dir': '/tmp/census_model', '_save_summary_steps': 100}
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+2018-01-30 13:29:16.368932: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+INFO:tensorflow:Saving checkpoints for 1 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 255.164, step = 1
+INFO:tensorflow:global_step/sec: 117.213
+INFO:tensorflow:loss = 66.2639, step = 101 (0.853 sec)
+INFO:tensorflow:global_step/sec: 232.969
+INFO:tensorflow:loss = 17.4017, step = 201 (0.429 sec)
+INFO:tensorflow:global_step/sec: 223.56
+INFO:tensorflow:loss = 19.981, step = 301 (0.447 sec)
+INFO:tensorflow:global_step/sec: 215.629
+INFO:tensorflow:loss = 13.2545, step = 401 (0.464 sec)
+INFO:tensorflow:global_step/sec: 223.221
+INFO:tensorflow:loss = 23.4322, step = 501 (0.448 sec)
+INFO:tensorflow:global_step/sec: 219.355
+INFO:tensorflow:loss = 16.1137, step = 601 (0.456 sec)
+INFO:tensorflow:global_step/sec: 219.458
+INFO:tensorflow:loss = 14.7021, step = 701 (0.456 sec)
+INFO:tensorflow:global_step/sec: 219.664
+INFO:tensorflow:loss = 14.306, step = 801 (0.455 sec)
+INFO:tensorflow:global_step/sec: 187.259
+INFO:tensorflow:loss = 18.8936, step = 901 (0.534 sec)
+INFO:tensorflow:global_step/sec: 220.986
+INFO:tensorflow:loss = 18.2711, step = 1001 (0.452 sec)
+INFO:tensorflow:global_step/sec: 127.205
+INFO:tensorflow:loss = 9.71077, step = 1101 (0.788 sec)
+INFO:tensorflow:global_step/sec: 90.9302
+INFO:tensorflow:loss = 15.8473, step = 1201 (1.100 sec)
+INFO:tensorflow:global_step/sec: 89.8575
+INFO:tensorflow:loss = 8.34464, step = 1301 (1.113 sec)
+INFO:tensorflow:global_step/sec: 165.793
+INFO:tensorflow:loss = 27.9212, step = 1401 (0.602 sec)
+INFO:tensorflow:global_step/sec: 238.881
+INFO:tensorflow:loss = 17.9861, step = 1501 (0.419 sec)
+INFO:tensorflow:global_step/sec: 226.009
+INFO:tensorflow:loss = 15.7452, step = 1601 (0.443 sec)
+INFO:tensorflow:Saving checkpoints for 1629 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.148851.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:29:32
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-1629
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:29:35
+INFO:tensorflow:Saving dict for global step 1629: accuracy = 0.842024, accuracy_baseline = 0.763774, auc = 0.89219, auc_precision_recall = 0.74771, average_loss = 0.348472, global_step = 1629, label/mean = 0.236226, loss = 13.9056, prediction/mean = 0.23031
+Results at epoch 2
+------------------------------------------------------------
+accuracy: 0.842024
+accuracy_baseline: 0.763774
+auc: 0.89219
+auc_precision_recall: 0.74771
+average_loss: 0.348472
+global_step: 1629
+label/mean: 0.236226
+loss: 13.9056
+prediction/mean: 0.23031
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-1629
+INFO:tensorflow:Saving checkpoints for 1630 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 20.5583, step = 1630
+INFO:tensorflow:global_step/sec: 117.749
+INFO:tensorflow:loss = 12.6437, step = 1730 (0.849 sec)
+INFO:tensorflow:global_step/sec: 216.13
+INFO:tensorflow:loss = 11.9119, step = 1830 (0.463 sec)
+INFO:tensorflow:global_step/sec: 214.806
+INFO:tensorflow:loss = 9.48382, step = 1930 (0.465 sec)
+INFO:tensorflow:global_step/sec: 212.009
+INFO:tensorflow:loss = 9.69392, step = 2030 (0.472 sec)
+INFO:tensorflow:global_step/sec: 212.181
+INFO:tensorflow:loss = 8.49427, step = 2130 (0.471 sec)
+INFO:tensorflow:global_step/sec: 210.952
+INFO:tensorflow:loss = 10.8669, step = 2230 (0.474 sec)
+INFO:tensorflow:global_step/sec: 204.643
+INFO:tensorflow:loss = 9.31392, step = 2330 (0.489 sec)
+INFO:tensorflow:global_step/sec: 136.074
+INFO:tensorflow:loss = 9.86582, step = 2430 (0.736 sec)
+INFO:tensorflow:global_step/sec: 69.735
+INFO:tensorflow:loss = 12.6094, step = 2530 (1.434 sec)
+INFO:tensorflow:global_step/sec: 88.2251
+INFO:tensorflow:loss = 15.1613, step = 2630 (1.134 sec)
+INFO:tensorflow:global_step/sec: 136.141
+INFO:tensorflow:loss = 11.1565, step = 2730 (0.733 sec)
+INFO:tensorflow:global_step/sec: 237.278
+INFO:tensorflow:loss = 10.8452, step = 2830 (0.421 sec)
+INFO:tensorflow:global_step/sec: 219.768
+INFO:tensorflow:loss = 17.7203, step = 2930 (0.455 sec)
+INFO:tensorflow:global_step/sec: 207.869
+INFO:tensorflow:loss = 12.8123, step = 3030 (0.481 sec)
+INFO:tensorflow:global_step/sec: 206.064
+INFO:tensorflow:loss = 18.1657, step = 3130 (0.485 sec)
+INFO:tensorflow:global_step/sec: 204.697
+INFO:tensorflow:loss = 16.2108, step = 3230 (0.488 sec)
+INFO:tensorflow:Saving checkpoints for 3258 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.457565.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:29:57
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-3258
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:30:00
+INFO:tensorflow:Saving dict for global step 3258: accuracy = 0.849764, accuracy_baseline = 0.763774, auc = 0.89788, auc_precision_recall = 0.756374, average_loss = 0.334622, global_step = 3258, label/mean = 0.236226, loss = 13.3529, prediction/mean = 0.226885
+Results at epoch 4
+------------------------------------------------------------
+accuracy: 0.849764
+accuracy_baseline: 0.763774
+auc: 0.89788
+auc_precision_recall: 0.756374
+average_loss: 0.334622
+global_step: 3258
+label/mean: 0.236226
+loss: 13.3529
+prediction/mean: 0.226885
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-3258
+INFO:tensorflow:Saving checkpoints for 3259 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 12.8976, step = 3259
+INFO:tensorflow:global_step/sec: 113.764
+INFO:tensorflow:loss = 17.0832, step = 3359 (0.879 sec)
+INFO:tensorflow:global_step/sec: 204.749
+INFO:tensorflow:loss = 18.7082, step = 3459 (0.488 sec)
+INFO:tensorflow:global_step/sec: 205.454
+INFO:tensorflow:loss = 11.1112, step = 3559 (0.487 sec)
+INFO:tensorflow:global_step/sec: 202.389
+INFO:tensorflow:loss = 12.5755, step = 3659 (0.494 sec)
+INFO:tensorflow:global_step/sec: 201.195
+INFO:tensorflow:loss = 18.8147, step = 3759 (0.497 sec)
+INFO:tensorflow:global_step/sec: 139.648
+INFO:tensorflow:loss = 12.6367, step = 3859 (0.717 sec)
+INFO:tensorflow:global_step/sec: 88.3789
+INFO:tensorflow:loss = 14.3646, step = 3959 (1.131 sec)
+INFO:tensorflow:global_step/sec: 84.7626
+INFO:tensorflow:loss = 11.2983, step = 4059 (1.180 sec)
+INFO:tensorflow:global_step/sec: 99.1662
+INFO:tensorflow:loss = 12.897, step = 4159 (1.007 sec)
+INFO:tensorflow:global_step/sec: 227.488
+INFO:tensorflow:loss = 12.469, step = 4259 (0.440 sec)
+INFO:tensorflow:global_step/sec: 212.396
+INFO:tensorflow:loss = 18.9458, step = 4359 (0.471 sec)
+INFO:tensorflow:global_step/sec: 203.943
+INFO:tensorflow:loss = 8.82944, step = 4459 (0.490 sec)
+INFO:tensorflow:global_step/sec: 206.047
+INFO:tensorflow:loss = 17.1045, step = 4559 (0.485 sec)
+INFO:tensorflow:global_step/sec: 206.484
+INFO:tensorflow:loss = 11.3305, step = 4659 (0.484 sec)
+INFO:tensorflow:global_step/sec: 198.011
+INFO:tensorflow:loss = 12.4739, step = 4759 (0.505 sec)
+INFO:tensorflow:global_step/sec: 143.926
+INFO:tensorflow:loss = 11.0402, step = 4859 (0.696 sec)
+INFO:tensorflow:Saving checkpoints for 4887 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 2.07635.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:30:21
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-4887
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:30:24
+INFO:tensorflow:Saving dict for global step 4887: accuracy = 0.852466, accuracy_baseline = 0.763774, auc = 0.900046, auc_precision_recall = 0.763332, average_loss = 0.328638, global_step = 4887, label/mean = 0.236226, loss = 13.1141, prediction/mean = 0.225938
+Results at epoch 6
+------------------------------------------------------------
+accuracy: 0.852466
+accuracy_baseline: 0.763774
+auc: 0.900046
+auc_precision_recall: 0.763332
+average_loss: 0.328638
+global_step: 4887
+label/mean: 0.236226
+loss: 13.1141
+prediction/mean: 0.225938
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-4887
+INFO:tensorflow:Saving checkpoints for 4888 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 16.9358, step = 4888
+INFO:tensorflow:global_step/sec: 117.648
+INFO:tensorflow:loss = 12.8872, step = 4988 (0.850 sec)
+INFO:tensorflow:global_step/sec: 201.193
+INFO:tensorflow:loss = 14.0921, step = 5088 (0.497 sec)
+INFO:tensorflow:global_step/sec: 203.643
+INFO:tensorflow:loss = 13.4867, step = 5188 (0.491 sec)
+INFO:tensorflow:global_step/sec: 204.648
+INFO:tensorflow:loss = 15.4446, step = 5288 (0.489 sec)
+INFO:tensorflow:global_step/sec: 201.766
+INFO:tensorflow:loss = 15.2959, step = 5388 (0.496 sec)
+INFO:tensorflow:global_step/sec: 145.459
+INFO:tensorflow:loss = 12.2439, step = 5488 (0.689 sec)
+INFO:tensorflow:global_step/sec: 90.5551
+INFO:tensorflow:loss = 10.5015, step = 5588 (1.104 sec)
+INFO:tensorflow:global_step/sec: 89.0905
+INFO:tensorflow:loss = 12.419, step = 5688 (1.123 sec)
+INFO:tensorflow:global_step/sec: 74.8962
+INFO:tensorflow:loss = 9.78413, step = 5788 (1.335 sec)
+INFO:tensorflow:global_step/sec: 206.992
+INFO:tensorflow:loss = 12.149, step = 5888 (0.482 sec)
+INFO:tensorflow:global_step/sec: 217.142
+INFO:tensorflow:loss = 16.0549, step = 5988 (0.461 sec)
+INFO:tensorflow:global_step/sec: 205.811
+INFO:tensorflow:loss = 8.47403, step = 6088 (0.486 sec)
+INFO:tensorflow:global_step/sec: 204.847
+INFO:tensorflow:loss = 15.6766, step = 6188 (0.488 sec)
+INFO:tensorflow:global_step/sec: 201.324
+INFO:tensorflow:loss = 13.7467, step = 6288 (0.497 sec)
+INFO:tensorflow:global_step/sec: 201.642
+INFO:tensorflow:loss = 13.0497, step = 6388 (0.496 sec)
+INFO:tensorflow:global_step/sec: 201.074
+INFO:tensorflow:loss = 8.07885, step = 6488 (0.497 sec)
+INFO:tensorflow:Saving checkpoints for 6516 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.17944.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:30:47
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-6516
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:30:49
+INFO:tensorflow:Saving dict for global step 6516: accuracy = 0.853572, accuracy_baseline = 0.763774, auc = 0.902698, auc_precision_recall = 0.766066, average_loss = 0.324237, global_step = 6516, label/mean = 0.236226, loss = 12.9385, prediction/mean = 0.228216
+Results at epoch 8
+------------------------------------------------------------
+accuracy: 0.853572
+accuracy_baseline: 0.763774
+auc: 0.902698
+auc_precision_recall: 0.766066
+average_loss: 0.324237
+global_step: 6516
+label/mean: 0.236226
+loss: 12.9385
+prediction/mean: 0.228216
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-6516
+INFO:tensorflow:Saving checkpoints for 6517 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 11.4618, step = 6517
+INFO:tensorflow:global_step/sec: 114.159
+INFO:tensorflow:loss = 13.0876, step = 6617 (0.876 sec)
+INFO:tensorflow:global_step/sec: 200.054
+INFO:tensorflow:loss = 10.0139, step = 6717 (0.500 sec)
+INFO:tensorflow:global_step/sec: 195.759
+INFO:tensorflow:loss = 11.4693, step = 6817 (0.511 sec)
+INFO:tensorflow:global_step/sec: 197.353
+INFO:tensorflow:loss = 19.3452, step = 6917 (0.507 sec)
+INFO:tensorflow:global_step/sec: 112.047
+INFO:tensorflow:loss = 13.2926, step = 7017 (0.894 sec)
+INFO:tensorflow:global_step/sec: 89.5524
+INFO:tensorflow:loss = 10.2955, step = 7117 (1.117 sec)
+INFO:tensorflow:global_step/sec: 89.1618
+INFO:tensorflow:loss = 10.3786, step = 7217 (1.122 sec)
+INFO:tensorflow:global_step/sec: 88.3583
+INFO:tensorflow:loss = 14.6854, step = 7317 (1.132 sec)
+INFO:tensorflow:global_step/sec: 124.005
+INFO:tensorflow:loss = 12.9152, step = 7417 (0.805 sec)
+INFO:tensorflow:global_step/sec: 215.313
+INFO:tensorflow:loss = 13.2265, step = 7517 (0.465 sec)
+INFO:tensorflow:global_step/sec: 190.842
+INFO:tensorflow:loss = 7.70949, step = 7617 (0.524 sec)
+INFO:tensorflow:global_step/sec: 193.897
+INFO:tensorflow:loss = 14.8821, step = 7717 (0.516 sec)
+INFO:tensorflow:global_step/sec: 186.104
+INFO:tensorflow:loss = 12.8745, step = 7817 (0.537 sec)
+INFO:tensorflow:global_step/sec: 192.329
+INFO:tensorflow:loss = 15.0509, step = 7917 (0.520 sec)
+INFO:tensorflow:global_step/sec: 173.827
+INFO:tensorflow:loss = 8.1659, step = 8017 (0.577 sec)
+INFO:tensorflow:global_step/sec: 85.0174
+INFO:tensorflow:loss = 13.9112, step = 8117 (1.176 sec)
+INFO:tensorflow:Saving checkpoints for 8145 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.00833149.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:31:13
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-8145
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:31:16
+INFO:tensorflow:Saving dict for global step 8145: accuracy = 0.855721, accuracy_baseline = 0.763774, auc = 0.903764, auc_precision_recall = 0.768523, average_loss = 0.321744, global_step = 8145, label/mean = 0.236226, loss = 12.839, prediction/mean = 0.243826
+Results at epoch 10
+------------------------------------------------------------
+accuracy: 0.855721
+accuracy_baseline: 0.763774
+auc: 0.903764
+auc_precision_recall: 0.768523
+average_loss: 0.321744
+global_step: 8145
+label/mean: 0.236226
+loss: 12.839
+prediction/mean: 0.243826
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-8145
+INFO:tensorflow:Saving checkpoints for 8146 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 16.2456, step = 8146
+INFO:tensorflow:global_step/sec: 47.696
+INFO:tensorflow:loss = 13.3542, step = 8246 (2.097 sec)
+INFO:tensorflow:global_step/sec: 91.1236
+INFO:tensorflow:loss = 12.6291, step = 8346 (1.098 sec)
+INFO:tensorflow:global_step/sec: 164.041
+INFO:tensorflow:loss = 14.9417, step = 8446 (0.608 sec)
+INFO:tensorflow:global_step/sec: 213.55
+INFO:tensorflow:loss = 9.75857, step = 8546 (0.468 sec)
+INFO:tensorflow:global_step/sec: 200.036
+INFO:tensorflow:loss = 14.226, step = 8646 (0.500 sec)
+INFO:tensorflow:global_step/sec: 194.433
+INFO:tensorflow:loss = 10.2746, step = 8746 (0.514 sec)
+INFO:tensorflow:global_step/sec: 193.11
+INFO:tensorflow:loss = 10.796, step = 8846 (0.518 sec)
+INFO:tensorflow:global_step/sec: 193.372
+INFO:tensorflow:loss = 17.1079, step = 8946 (0.517 sec)
+INFO:tensorflow:global_step/sec: 80.1642
+INFO:tensorflow:loss = 12.4152, step = 9046 (1.249 sec)
+INFO:tensorflow:global_step/sec: 90.9095
+INFO:tensorflow:loss = 13.8271, step = 9146 (1.100 sec)
+INFO:tensorflow:global_step/sec: 74.3634
+INFO:tensorflow:loss = 12.0496, step = 9246 (1.345 sec)
+INFO:tensorflow:global_step/sec: 79.9302
+INFO:tensorflow:loss = 10.6985, step = 9346 (1.251 sec)
+INFO:tensorflow:global_step/sec: 161.869
+INFO:tensorflow:loss = 11.2951, step = 9446 (0.619 sec)
+INFO:tensorflow:global_step/sec: 140.949
+INFO:tensorflow:loss = 15.0905, step = 9546 (0.708 sec)
+INFO:tensorflow:global_step/sec: 140.237
+INFO:tensorflow:loss = 11.1444, step = 9646 (0.713 sec)
+INFO:tensorflow:global_step/sec: 128.282
+INFO:tensorflow:loss = 12.3788, step = 9746 (0.781 sec)
+INFO:tensorflow:Saving checkpoints for 9774 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 1.7862.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:31:43
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-9774
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:31:46
+INFO:tensorflow:Saving dict for global step 9774: accuracy = 0.85351, accuracy_baseline = 0.763774, auc = 0.900696, auc_precision_recall = 0.755018, average_loss = 0.327072, global_step = 9774, label/mean = 0.236226, loss = 13.0516, prediction/mean = 0.240056
+Results at epoch 12
+------------------------------------------------------------
+accuracy: 0.85351
+accuracy_baseline: 0.763774
+auc: 0.900696
+auc_precision_recall: 0.755018
+average_loss: 0.327072
+global_step: 9774
+label/mean: 0.236226
+loss: 13.0516
+prediction/mean: 0.240056
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-9774
+INFO:tensorflow:Saving checkpoints for 9775 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 17.4432, step = 9775
+INFO:tensorflow:global_step/sec: 58.2495
+INFO:tensorflow:loss = 14.6248, step = 9875 (1.718 sec)
+INFO:tensorflow:global_step/sec: 82.5211
+INFO:tensorflow:loss = 11.3672, step = 9975 (1.212 sec)
+INFO:tensorflow:global_step/sec: 83.3969
+INFO:tensorflow:loss = 12.1757, step = 10075 (1.200 sec)
+INFO:tensorflow:global_step/sec: 81.3296
+INFO:tensorflow:loss = 14.8932, step = 10175 (1.228 sec)
+INFO:tensorflow:global_step/sec: 195.397
+INFO:tensorflow:loss = 10.9237, step = 10275 (0.512 sec)
+INFO:tensorflow:global_step/sec: 177.717
+INFO:tensorflow:loss = 15.9202, step = 10375 (0.562 sec)
+INFO:tensorflow:global_step/sec: 172.627
+INFO:tensorflow:loss = 11.1921, step = 10475 (0.580 sec)
+INFO:tensorflow:global_step/sec: 183.467
+INFO:tensorflow:loss = 11.8263, step = 10575 (0.545 sec)
+INFO:tensorflow:global_step/sec: 147.478
+INFO:tensorflow:loss = 9.73071, step = 10675 (0.679 sec)
+INFO:tensorflow:global_step/sec: 88.0845
+INFO:tensorflow:loss = 16.7749, step = 10775 (1.135 sec)
+INFO:tensorflow:global_step/sec: 89.7949
+INFO:tensorflow:loss = 13.1153, step = 10875 (1.114 sec)
+INFO:tensorflow:global_step/sec: 88.862
+INFO:tensorflow:loss = 10.4825, step = 10975 (1.125 sec)
+INFO:tensorflow:global_step/sec: 89.3216
+INFO:tensorflow:loss = 9.94647, step = 11075 (1.120 sec)
+INFO:tensorflow:global_step/sec: 97.7044
+INFO:tensorflow:loss = 15.4808, step = 11175 (1.022 sec)
+INFO:tensorflow:global_step/sec: 209.031
+INFO:tensorflow:loss = 14.1625, step = 11275 (0.478 sec)
+INFO:tensorflow:global_step/sec: 206.343
+INFO:tensorflow:loss = 6.31518, step = 11375 (0.485 sec)
+INFO:tensorflow:Saving checkpoints for 11403 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.525777.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:32:11
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-11403
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:32:17
+INFO:tensorflow:Saving dict for global step 11403: accuracy = 0.853817, accuracy_baseline = 0.763774, auc = 0.904858, auc_precision_recall = 0.766838, average_loss = 0.32083, global_step = 11403, label/mean = 0.236226, loss = 12.8025, prediction/mean = 0.229754
+Results at epoch 14
+------------------------------------------------------------
+accuracy: 0.853817
+accuracy_baseline: 0.763774
+auc: 0.904858
+auc_precision_recall: 0.766838
+average_loss: 0.32083
+global_step: 11403
+label/mean: 0.236226
+loss: 12.8025
+prediction/mean: 0.229754
+Parsing /tmp/census_data/////////
+
+
+
+
+
+
+
+
+
+
+INFO:tensorflow:global_step/sec: 91.317
+INFO:tensorflow:loss = 12.3725, step = 19220 (1.095 sec)
+INFO:tensorflow:global_step/sec: 90.3221
+INFO:tensorflow:loss = 10.0132, step = 19320 (1.107 sec)
+INFO:tensorflow:global_step/sec: 90.3755
+INFO:tensorflow:loss = 12.1422, step = 19420 (1.106 sec)
+INFO:tensorflow:global_step/sec: 89.3045
+INFO:tensorflow:loss = 12.9237, step = 19520 (1.120 sec)
+INFO:tensorflow:Saving checkpoints for 19548 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 3.95977.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:34:54
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-19548
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:34:58
+INFO:tensorflow:Saving dict for global step 19548: accuracy = 0.856581, accuracy_baseline = 0.763774, auc = 0.907535, auc_precision_recall = 0.774461, average_loss = 0.31535, global_step = 19548, label/mean = 0.236226, loss = 12.5839, prediction/mean = 0.236069
+Results at epoch 24
+------------------------------------------------------------
+accuracy: 0.856581
+accuracy_baseline: 0.763774
+auc: 0.907535
+auc_precision_recall: 0.774461
+average_loss: 0.31535
+global_step: 19548
+label/mean: 0.236226
+loss: 12.5839
+prediction/mean: 0.236069
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-19548
+INFO:tensorflow:Saving checkpoints for 19549 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 20.5314, step = 19549
+INFO:tensorflow:global_step/sec: 45.6389
+INFO:tensorflow:loss = 13.0763, step = 19649 (2.192 sec)
+INFO:tensorflow:global_step/sec: 85.7809
+INFO:tensorflow:loss = 11.7407, step = 19749 (1.166 sec)
+INFO:tensorflow:global_step/sec: 84.8862
+INFO:tensorflow:loss = 10.2529, step = 19849 (1.177 sec)
+INFO:tensorflow:global_step/sec: 227.289
+INFO:tensorflow:loss = 12.3922, step = 19949 (0.440 sec)
+INFO:tensorflow:global_step/sec: 201.778
+INFO:tensorflow:loss = 15.8005, step = 20049 (0.496 sec)
+INFO:tensorflow:global_step/sec: 195.062
+INFO:tensorflow:loss = 11.6124, step = 20149 (0.513 sec)
+INFO:tensorflow:global_step/sec: 192.625
+INFO:tensorflow:loss = 16.7225, step = 20249 (0.519 sec)
+INFO:tensorflow:global_step/sec: 191.343
+INFO:tensorflow:loss = 11.5316, step = 20349 (0.523 sec)
+INFO:tensorflow:global_step/sec: 148.796
+INFO:tensorflow:loss = 13.5341, step = 20449 (0.672 sec)
+INFO:tensorflow:global_step/sec: 190.523
+INFO:tensorflow:loss = 10.8646, step = 20549 (0.525 sec)
+INFO:tensorflow:global_step/sec: 183.163
+INFO:tensorflow:loss = 15.7107, step = 20649 (0.546 sec)
+INFO:tensorflow:global_step/sec: 191.621
+INFO:tensorflow:loss = 11.0403, step = 20749 (0.522 sec)
+INFO:tensorflow:global_step/sec: 185.51
+INFO:tensorflow:loss = 10.125, step = 20849 (0.539 sec)
+INFO:tensorflow:global_step/sec: 96.7046
+INFO:tensorflow:loss = 9.96538, step = 20949 (1.035 sec)
+INFO:tensorflow:global_step/sec: 89.9016
+INFO:tensorflow:loss = 11.058, step = 21049 (1.112 sec)
+INFO:tensorflow:global_step/sec: 89.058
+INFO:tensorflow:loss = 17.2753, step = 21149 (1.123 sec)
+INFO:tensorflow:Saving checkpoints for 21177 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.0663877.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:35:23
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-21177
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:35:26
+INFO:tensorflow:Saving dict for global step 21177: accuracy = 0.856336, accuracy_baseline = 0.763774, auc = 0.907437, auc_precision_recall = 0.77627, average_loss = 0.316069, global_step = 21177, label/mean = 0.236226, loss = 12.6126, prediction/mean = 0.252096
+Results at epoch 26
+------------------------------------------------------------
+accuracy: 0.856336
+accuracy_baseline: 0.763774
+auc: 0.907437
+auc_precision_recall: 0.77627
+average_loss: 0.316069
+global_step: 21177
+label/mean: 0.236226
+loss: 12.6126
+prediction/mean: 0.252096
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-21177
+INFO:tensorflow:Saving checkpoints for 21178 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 9.62858, step = 21178
+INFO:tensorflow:global_step/sec: 109.136
+INFO:tensorflow:loss = 7.39352, step = 21278 (0.916 sec)
+INFO:tensorflow:global_step/sec: 192.961
+INFO:tensorflow:loss = 7.18166, step = 21378 (0.518 sec)
+INFO:tensorflow:global_step/sec: 186.406
+INFO:tensorflow:loss = 14.8229, step = 21478 (0.536 sec)
+INFO:tensorflow:global_step/sec: 186.209
+INFO:tensorflow:loss = 13.5636, step = 21578 (0.537 sec)
+INFO:tensorflow:global_step/sec: 102.742
+INFO:tensorflow:loss = 10.6795, step = 21678 (0.974 sec)
+INFO:tensorflow:global_step/sec: 90.219
+INFO:tensorflow:loss = 9.55712, step = 21778 (1.108 sec)
+INFO:tensorflow:global_step/sec: 88.8947
+INFO:tensorflow:loss = 15.2551, step = 21878 (1.125 sec)
+INFO:tensorflow:global_step/sec: 88.8604
+INFO:tensorflow:loss = 6.79332, step = 21978 (1.126 sec)
+INFO:tensorflow:global_step/sec: 74.954
+INFO:tensorflow:loss = 9.07228, step = 22078 (1.334 sec)
+INFO:tensorflow:global_step/sec: 87.6502
+INFO:tensorflow:loss = 18.466, step = 22178 (1.141 sec)
+INFO:tensorflow:global_step/sec: 90.7558
+INFO:tensorflow:loss = 12.4741, step = 22278 (1.102 sec)
+INFO:tensorflow:global_step/sec: 89.4628
+INFO:tensorflow:loss = 10.5621, step = 22378 (1.118 sec)
+INFO:tensorflow:global_step/sec: 89.6796
+INFO:tensorflow:loss = 13.0779, step = 22478 (1.115 sec)
+INFO:tensorflow:global_step/sec: 90.6422
+INFO:tensorflow:loss = 11.4026, step = 22578 (1.103 sec)
+INFO:tensorflow:global_step/sec: 90.4611
+INFO:tensorflow:loss = 11.4074, step = 22678 (1.105 sec)
+INFO:tensorflow:global_step/sec: 89.5849
+INFO:tensorflow:loss = 11.5126, step = 22778 (1.116 sec)
+INFO:tensorflow:Saving checkpoints for 22806 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.342125.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:35:55
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-22806
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:35:58
+INFO:tensorflow:Saving dict for global step 22806: accuracy = 0.858055, accuracy_baseline = 0.763774, auc = 0.908109, auc_precision_recall = 0.7761, average_loss = 0.31437, global_step = 22806, label/mean = 0.236226, loss = 12.5448, prediction/mean = 0.238116
+Results at epoch 28
+------------------------------------------------------------
+accuracy: 0.858055
+accuracy_baseline: 0.763774
+auc: 0.908109
+auc_precision_recall: 0.7761
+average_loss: 0.31437
+global_step: 22806
+label/mean: 0.236226
+loss: 12.5448
+prediction/mean: 0.238116
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-22806
+INFO:tensorflow:Saving checkpoints for 22807 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 9.13075, step = 22807
+INFO:tensorflow:global_step/sec: 113.079
+INFO:tensorflow:loss = 10.8494, step = 22907 (0.885 sec)
+INFO:tensorflow:global_step/sec: 198.365
+INFO:tensorflow:loss = 14.4542, step = 23007 (0.504 sec)
+INFO:tensorflow:global_step/sec: 192.845
+INFO:tensorflow:loss = 18.9621, step = 23107 (0.519 sec)
+INFO:tensorflow:global_step/sec: 193.84
+INFO:tensorflow:loss = 13.5713, step = 23207 (0.516 sec)
+INFO:tensorflow:global_step/sec: 189.75
+INFO:tensorflow:loss = 21.9131, step = 23307 (0.527 sec)
+INFO:tensorflow:global_step/sec: 92.5048
+INFO:tensorflow:loss = 7.58853, step = 23407 (1.082 sec)
+INFO:tensorflow:global_step/sec: 89.2156
+INFO:tensorflow:loss = 11.3272, step = 23507 (1.121 sec)
+INFO:tensorflow:global_step/sec: 89.6863
+INFO:tensorflow:loss = 13.3501, step = 23607 (1.115 sec)
+INFO:tensorflow:global_step/sec: 73.9926
+INFO:tensorflow:loss = 11.7398, step = 23707 (1.352 sec)
+INFO:tensorflow:global_step/sec: 90.317
+INFO:tensorflow:loss = 22.6737, step = 23807 (1.107 sec)
+INFO:tensorflow:global_step/sec: 91.1169
+INFO:tensorflow:loss = 10.8303, step = 23907 (1.097 sec)
+INFO:tensorflow:global_step/sec: 90.8723
+INFO:tensorflow:loss = 18.7768, step = 24007 (1.101 sec)
+INFO:tensorflow:global_step/sec: 91.0731
+INFO:tensorflow:loss = 7.62943, step = 24107 (1.098 sec)
+INFO:tensorflow:global_step/sec: 91.1232
+INFO:tensorflow:loss = 10.6607, step = 24207 (1.097 sec)
+INFO:tensorflow:global_step/sec: 90.9421
+INFO:tensorflow:loss = 15.9928, step = 24307 (1.100 sec)
+INFO:tensorflow:global_step/sec: 90.4298
+INFO:tensorflow:loss = 7.68188, step = 24407 (1.106 sec)
+INFO:tensorflow:Saving checkpoints for 24435 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.109007.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:36:29
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-24435
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:36:32
+INFO:tensorflow:Saving dict for global step 24435: accuracy = 0.847491, accuracy_baseline = 0.763774, auc = 0.898461, auc_precision_recall = 0.741209, average_loss = 0.330676, global_step = 24435, label/mean = 0.236226, loss = 13.1954, prediction/mean = 0.222254
+Results at epoch 30
+------------------------------------------------------------
+accuracy: 0.847491
+accuracy_baseline: 0.763774
+auc: 0.898461
+auc_precision_recall: 0.741209
+average_loss: 0.330676
+global_step: 24435
+label/mean: 0.236226
+loss: 13.1954
+prediction/mean: 0.222254
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-24435
+INFO:tensorflow:Saving checkpoints for 24436 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 11.0194, step = 24436
+INFO:tensorflow:global_step/sec: 48.0943
+INFO:tensorflow:loss = 12.8136, step = 24536 (2.080 sec)
+INFO:tensorflow:global_step/sec: 90.0399
+INFO:tensorflow:loss = 8.87148, step = 24636 (1.111 sec)
+INFO:tensorflow:global_step/sec: 90.211
+INFO:tensorflow:loss = 13.8483, step = 24736 (1.108 sec)
+INFO:tensorflow:global_step/sec: 90.712
+INFO:tensorflow:loss = 16.9225, step = 24836 (1.103 sec)
+INFO:tensorflow:global_step/sec: 90.3141
+INFO:tensorflow:loss = 12.7483, step = 24936 (1.107 sec)
+INFO:tensorflow:global_step/sec: 90.2085
+INFO:tensorflow:loss = 11.9119, step = 25036 (1.109 sec)
+INFO:tensorflow:global_step/sec: 89.9386
+INFO:tensorflow:loss = 8.17126, step = 25136 (1.112 sec)
+INFO:tensorflow:global_step/sec: 88.8168
+INFO:tensorflow:loss = 12.5897, step = 25236 (1.126 sec)
+INFO:tensorflow:global_step/sec: 83.4005
+INFO:tensorflow:loss = 14.7518, step = 25336 (1.198 sec)
+INFO:tensorflow:global_step/sec: 225.945
+INFO:tensorflow:loss = 10.8235, step = 25436 (0.443 sec)
+INFO:tensorflow:global_step/sec: 200.312
+INFO:tensorflow:loss = 12.4348, step = 25536 (0.499 sec)
+INFO:tensorflow:global_step/sec: 195.971
+INFO:tensorflow:loss = 10.0844, step = 25636 (0.510 sec)
+INFO:tensorflow:global_step/sec: 194.337
+INFO:tensorflow:loss = 12.7998, step = 25736 (0.514 sec)
+INFO:tensorflow:global_step/sec: 191.632
+INFO:tensorflow:loss = 10.7927, step = 25836 (0.522 sec)
+INFO:tensorflow:global_step/sec: 133.883
+INFO:tensorflow:loss = 14.8589, step = 25936 (0.748 sec)
+INFO:tensorflow:global_step/sec: 89.7016
+INFO:tensorflow:loss = 11.8725, step = 26036 (1.115 sec)
+INFO:tensorflow:Saving checkpoints for 26064 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.512929.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:37:00
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-26064
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:37:03
+INFO:tensorflow:Saving dict for global step 26064: accuracy = 0.853756, accuracy_baseline = 0.763774, auc = 0.906916, auc_precision_recall = 0.775482, average_loss = 0.315615, global_step = 26064, label/mean = 0.236226, loss = 12.5944, prediction/mean = 0.247067
+Results at epoch 32
+------------------------------------------------------------
+accuracy: 0.853756
+accuracy_baseline: 0.763774
+auc: 0.906916
+auc_precision_recall: 0.775482
+average_loss: 0.315615
+global_step: 26064
+label/mean: 0.236226
+loss: 12.5944
+prediction/mean: 0.247067
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-26064
+INFO:tensorflow:Saving checkpoints for 26065 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 15.3532, step = 26065
+INFO:tensorflow:global_step/sec: 48.1881
+INFO:tensorflow:loss = 15.0978, step = 26165 (2.076 sec)
+INFO:tensorflow:global_step/sec: 88.1378
+INFO:tensorflow:loss = 10.6194, step = 26265 (1.135 sec)
+INFO:tensorflow:global_step/sec: 90.1765
+INFO:tensorflow:loss = 6.52383, step = 26365 (1.109 sec)
+INFO:tensorflow:global_step/sec: 89.7148
+INFO:tensorflow:loss = 11.5579, step = 26465 (1.115 sec)
+INFO:tensorflow:global_step/sec: 90.5245
+INFO:tensorflow:loss = 11.4928, step = 26565 (1.105 sec)
+INFO:tensorflow:global_step/sec: 89.4647
+INFO:tensorflow:loss = 10.4645, step = 26665 (1.118 sec)
+INFO:tensorflow:global_step/sec: 89.0381
+INFO:tensorflow:loss = 9.43342, step = 26765 (1.123 sec)
+INFO:tensorflow:global_step/sec: 89.0053
+INFO:tensorflow:loss = 8.97478, step = 26865 (1.124 sec)
+INFO:tensorflow:global_step/sec: 74.3408
+INFO:tensorflow:loss = 19.3273, step = 26965 (1.345 sec)
+INFO:tensorflow:global_step/sec: 89.8993
+INFO:tensorflow:loss = 12.2383, step = 27065 (1.112 sec)
+INFO:tensorflow:global_step/sec: 90.3006
+INFO:tensorflow:loss = 10.6813, step = 27165 (1.107 sec)
+INFO:tensorflow:global_step/sec: 91.0068
+INFO:tensorflow:loss = 11.0839, step = 27265 (1.099 sec)
+INFO:tensorflow:global_step/sec: 90.1774
+INFO:tensorflow:loss = 9.62509, step = 27365 (1.109 sec)
+INFO:tensorflow:global_step/sec: 89.9193
+INFO:tensorflow:loss = 14.9276, step = 27465 (1.112 sec)
+INFO:tensorflow:global_step/sec: 89.5509
+INFO:tensorflow:loss = 9.87741, step = 27565 (1.117 sec)
+INFO:tensorflow:global_step/sec: 90.2323
+INFO:tensorflow:loss = 15.4679, step = 27665 (1.108 sec)
+INFO:tensorflow:Saving checkpoints for 27693 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.784657.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:37:35
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-27693
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:37:38
+INFO:tensorflow:Saving dict for global step 27693: accuracy = 0.857195, accuracy_baseline = 0.763774, auc = 0.908291, auc_precision_recall = 0.776414, average_loss = 0.313932, global_step = 27693, label/mean = 0.236226, loss = 12.5273, prediction/mean = 0.240796
+Results at epoch 34
+------------------------------------------------------------
+accuracy: 0.857195
+accuracy_baseline: 0.763774
+auc: 0.908291
+auc_precision_recall: 0.776414
+average_loss: 0.313932
+global_step: 27693
+label/mean: 0.236226
+loss: 12.5273
+prediction/mean: 0.240796
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-27693
+INFO:tensorflow:Saving checkpoints for 27694 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 7.59159, step = 27694
+INFO:tensorflow:global_step/sec: 108.4
+INFO:tensorflow:loss = 15.647, step = 27794 (0.923 sec)
+INFO:tensorflow:global_step/sec: 191.199
+INFO:tensorflow:loss = 6.88686, step = 27894 (0.523 sec)
+INFO:tensorflow:global_step/sec: 190.47
+INFO:tensorflow:loss = 15.1613, step = 27994 (0.525 sec)
+INFO:tensorflow:global_step/sec: 188.721
+INFO:tensorflow:loss = 16.1339, step = 28094 (0.530 sec)
+INFO:tensorflow:global_step/sec: 159.561
+INFO:tensorflow:loss = 12.2135, step = 28194 (0.628 sec)
+INFO:tensorflow:global_step/sec: 88.9784
+INFO:tensorflow:loss = 11.7947, step = 28294 (1.124 sec)
+INFO:tensorflow:global_step/sec: 89.6754
+INFO:tensorflow:loss = 13.6136, step = 28394 (1.115 sec)
+INFO:tensorflow:global_step/sec: 88.4373
+INFO:tensorflow:loss = 10.6423, step = 28494 (1.131 sec)
+INFO:tensorflow:global_step/sec: 73.903
+INFO:tensorflow:loss = 12.2617, step = 28594 (1.353 sec)
+INFO:tensorflow:global_step/sec: 89.4702
+INFO:tensorflow:loss = 9.2248, step = 28694 (1.118 sec)
+INFO:tensorflow:global_step/sec: 91.0549
+INFO:tensorflow:loss = 10.4729, step = 28794 (1.098 sec)
+INFO:tensorflow:global_step/sec: 90.6438
+INFO:tensorflow:loss = 22.4933, step = 28894 (1.104 sec)
+INFO:tensorflow:global_step/sec: 88.0254
+INFO:tensorflow:loss = 11.8752, step = 28994 (1.136 sec)
+INFO:tensorflow:global_step/sec: 88.9313
+INFO:tensorflow:loss = 13.5673, step = 29094 (1.124 sec)
+INFO:tensorflow:global_step/sec: 89.1575
+INFO:tensorflow:loss = 14.1475, step = 29194 (1.122 sec)
+INFO:tensorflow:global_step/sec: 89.2832
+INFO:tensorflow:loss = 7.20437, step = 29294 (1.120 sec)
+INFO:tensorflow:Saving checkpoints for 29322 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.504165.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:38:09
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-29322
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:38:11
+INFO:tensorflow:Saving dict for global step 29322: accuracy = 0.857871, accuracy_baseline = 0.763774, auc = 0.908895, auc_precision_recall = 0.776671, average_loss = 0.313594, global_step = 29322, label/mean = 0.236226, loss = 12.5138, prediction/mean = 0.229785
+Results at epoch 36
+------------------------------------------------------------
+accuracy: 0.857871
+accuracy_baseline: 0.763774
+auc: 0.908895
+auc_precision_recall: 0.776671
+average_loss: 0.313594
+global_step: 29322
+label/mean: 0.236226
+loss: 12.5138
+prediction/mean: 0.229785
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-29322
+INFO:tensorflow:Saving checkpoints for 29323 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 8.43346, step = 29323
+INFO:tensorflow:global_step/sec: 110.018
+INFO:tensorflow:loss = 13.1237, step = 29423 (0.909 sec)
+INFO:tensorflow:global_step/sec: 191.965
+INFO:tensorflow:loss = 8.63465, step = 29523 (0.521 sec)
+INFO:tensorflow:global_step/sec: 191.738
+INFO:tensorflow:loss = 5.2993, step = 29623 (0.522 sec)
+INFO:tensorflow:global_step/sec: 150.746
+INFO:tensorflow:loss = 9.68349, step = 29723 (0.665 sec)
+INFO:tensorflow:global_step/sec: 89.6028
+INFO:tensorflow:loss = 8.80911, step = 29823 (1.116 sec)
+INFO:tensorflow:global_step/sec: 90.2059
+INFO:tensorflow:loss = 13.7604, step = 29923 (1.109 sec)
+INFO:tensorflow:global_step/sec: 89.7017
+INFO:tensorflow:loss = 10.3468, step = 30023 (1.115 sec)
+INFO:tensorflow:global_step/sec: 89.406
+INFO:tensorflow:loss = 13.4519, step = 30123 (1.119 sec)
+INFO:tensorflow:global_step/sec: 75.2134
+INFO:tensorflow:loss = 19.5578, step = 30223 (1.329 sec)
+INFO:tensorflow:global_step/sec: 89.2138
+INFO:tensorflow:loss = 15.0954, step = 30323 (1.121 sec)
+INFO:tensorflow:global_step/sec: 90.7851
+INFO:tensorflow:loss = 11.9548, step = 30423 (1.101 sec)
+INFO:tensorflow:global_step/sec: 90.8307
+INFO:tensorflow:loss = 16.024, step = 30523 (1.101 sec)
+INFO:tensorflow:global_step/sec: 90.9582
+INFO:tensorflow:loss = 16.5903, step = 30623 (1.099 sec)
+INFO:tensorflow:global_step/sec: 91.123
+INFO:tensorflow:loss = 18.7807, step = 30723 (1.097 sec)
+INFO:tensorflow:global_step/sec: 90.2158
+INFO:tensorflow:loss = 12.7538, step = 30823 (1.109 sec)
+INFO:tensorflow:global_step/sec: 89.7432
+INFO:tensorflow:loss = 13.8942, step = 30923 (1.114 sec)
+INFO:tensorflow:Saving checkpoints for 30951 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.268797.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:38:41
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-30951
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:38:44
+INFO:tensorflow:Saving dict for global step 30951: accuracy = 0.857933, accuracy_baseline = 0.763774, auc = 0.909048, auc_precision_recall = 0.778476, average_loss = 0.312838, global_step = 30951, label/mean = 0.236226, loss = 12.4836, prediction/mean = 0.244005
+Results at epoch 38
+------------------------------------------------------------
+accuracy: 0.857933
+accuracy_baseline: 0.763774
+auc: 0.909048
+auc_precision_recall: 0.778476
+average_loss: 0.312838
+global_step: 30951
+label/mean: 0.236226
+loss: 12.4836
+prediction/mean: 0.244005
+Parsing /tmp/census_data/adult.data
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-30951
+INFO:tensorflow:Saving checkpoints for 30952 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:loss = 12.0686, step = 30952
+INFO:tensorflow:global_step/sec: 47.803
+INFO:tensorflow:loss = 14.2743, step = 31052 (2.092 sec)
+INFO:tensorflow:global_step/sec: 90.1795
+INFO:tensorflow:loss = 10.9764, step = 31152 (1.109 sec)
+INFO:tensorflow:global_step/sec: 90.4285
+INFO:tensorflow:loss = 12.3861, step = 31252 (1.106 sec)
+INFO:tensorflow:global_step/sec: 89.8352
+INFO:tensorflow:loss = 13.2591, step = 31352 (1.113 sec)
+INFO:tensorflow:global_step/sec: 91.015
+INFO:tensorflow:loss = 15.1091, step = 31452 (1.099 sec)
+INFO:tensorflow:global_step/sec: 87.884
+INFO:tensorflow:loss = 13.983, step = 31552 (1.138 sec)
+INFO:tensorflow:global_step/sec: 88.343
+INFO:tensorflow:loss = 7.70816, step = 31652 (1.132 sec)
+INFO:tensorflow:global_step/sec: 82.7859
+INFO:tensorflow:loss = 15.7122, step = 31752 (1.208 sec)
+INFO:tensorflow:global_step/sec: 72.4838
+INFO:tensorflow:loss = 9.41473, step = 31852 (1.379 sec)
+INFO:tensorflow:global_step/sec: 90.3835
+INFO:tensorflow:loss = 8.23566, step = 31952 (1.106 sec)
+INFO:tensorflow:global_step/sec: 88.7725
+INFO:tensorflow:loss = 10.925, step = 32052 (1.126 sec)
+INFO:tensorflow:global_step/sec: 86.2151
+INFO:tensorflow:loss = 9.30175, step = 32152 (1.160 sec)
+INFO:tensorflow:global_step/sec: 86.4017
+INFO:tensorflow:loss = 19.0606, step = 32252 (1.157 sec)
+INFO:tensorflow:global_step/sec: 84.7873
+INFO:tensorflow:loss = 12.1363, step = 32352 (1.179 sec)
+INFO:tensorflow:global_step/sec: 79.1001
+INFO:tensorflow:loss = 12.5851, step = 32452 (1.264 sec)
+INFO:tensorflow:global_step/sec: 87.9721
+INFO:tensorflow:loss = 9.79905, step = 32552 (1.137 sec)
+INFO:tensorflow:Saving checkpoints for 32580 into /tmp/census_model/model.ckpt.
+INFO:tensorflow:Loss for final step: 0.733347.
+Parsing /tmp/census_data/adult.test
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+INFO:tensorflow:Starting evaluation at 2018-01-30-12:39:15
+INFO:tensorflow:Restoring parameters from /tmp/census_model/model.ckpt-32580
+INFO:tensorflow:Finished evaluation at 2018-01-30-12:39:19
+INFO:tensorflow:Saving dict for global step 32580: accuracy = 0.857564, accuracy_baseline = 0.763774, auc = 0.909153, auc_precision_recall = 0.779082, average_loss = 0.31302, global_step = 32580, label/mean = 0.236226, loss = 12.4909, prediction/mean = 0.248369
+Results at epoch 40
+------------------------------------------------------------
+accuracy: 0.857564
+accuracy_baseline: 0.763774
+auc: 0.909153
+auc_precision_recall: 0.779082
+average_loss: 0.31302
+global_step: 32580
+label/mean: 0.236226
+loss: 12.4909
+prediction/mean: 0.248369
