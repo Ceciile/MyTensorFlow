@@ -21,6 +21,7 @@ result = tf.multiply(x1, x2)
 #print(result) Tensor("Mul:0", shape=(4,), dtype=int32)
 
 #run this code in an interactive session
+'''
 # Intialize the Session
 sess = tf.Session()
 
@@ -29,3 +30,8 @@ print(sess.run(result))
 
 # Close the session
 sess.close()
+'''
+# Initialize Session and run `result`
+with tf.Session() as sess:
+  output = sess.run(result)
+  print(output)
