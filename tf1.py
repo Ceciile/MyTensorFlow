@@ -18,6 +18,14 @@ x2 = tf.constant([5,6,7,8])
 result = tf.multiply(x1, x2)
 #because ofabstract tensor
 # Print the result
-print(result) #Tensor("Mul:0", shape=(4,), dtype=int32)
+#print(result) Tensor("Mul:0", shape=(4,), dtype=int32)
 
+#run this code in an interactive session
+# Intialize the Session
+sess = tf.Session()
 
+# Print the result
+print(sess.run(result))
+
+# Close the session
+sess.close()
