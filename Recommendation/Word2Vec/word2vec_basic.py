@@ -145,14 +145,14 @@ graph = tf.Graph()
 
 with graph.as_default():
 
-  # Input data.
+  # Input data.创建占位符
   train_inputs = tf.placeholder(tf.int32, shape=[batch_size])
   train_labels = tf.placeholder(tf.int32, shape=[batch_size, 1])
   valid_dataset = tf.constant(valid_examples, dtype=tf.int32)
 
   # Ops and variables pinned to the CPU because of missing GPU implementation
   with tf.device('/cpu:0'):
-    # Look up embeddings for inputs.
+    # Look up embeddings for inputs.embedding matrix->张量里索引对应的元素
     embeddings = tf.Variable(
         tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
     embed = tf.nn.embedding_lookup(embeddings, train_inputs)
@@ -161,33 +161,35 @@ with graph.as_default():
     nce_weights = tf.Variable(
         tf.truncated_normal([vocabulary_size, embedding_size],
                             stddev=1.0 / math.sqrt(embedding_size)))
-    nce_biases = tf.Variable(tf.zeros([vocabulary_size]))
-#The standard deviation of the truncated normal distribution
+    nce_biases = tf.Variable(tf.zeros([vocabulary_size]))#偏差值
+#The standard deviation of the truncated normal distribution截断的产生正太分布的函数，就是说产生正太分布的值如果与均值的差值大于两倍的标准差，那就重新生成
 #stddev: 一个零维张量或 类型属于dtype的Python值. 这个值决定正态分布片段的标准差
 
   # Compute the average NCE loss for the batch.
-  # tf.nce_loss automatically draws a new sample of the negative labels each
-  # time we evaluate the loss.
+  # tf.nce_loss automatically draws a new sample of the negative labels each time we evaluate the loss.
   # Explanation of the meaning of NCE loss:
   #   http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
+#if sampled_values is None:用log_uniform_candidate_sampler去采样负样本
   loss = tf.reduce_mean(
       tf.nn.nce_loss(weights=nce_weights,
                      biases=nce_biases,
                      labels=train_labels,
-                     inputs=embed,
-                     num_sampled=num_sampled,
+                     inputs=embed,# random train
+                     num_sampled=num_sampled,#负标签的样本
                      num_classes=vocabulary_size))
 
   # Construct the SGD optimizer using a learning rate of 1.0.
   optimizer = tf.train.GradientDescentOptimizer(1.0).minimize(loss)
 
   # Compute the cosine similarity between minibatch examples and all embeddings.
+#keep_dims:表示是否保留原始数据的维度，False相当于执行完后原始数据就会少一个维度 0 sumcolone 1 sum everyLine->
   norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
   normalized_embeddings = embeddings / norm
   valid_embeddings = tf.nn.embedding_lookup(
       normalized_embeddings, valid_dataset)
-  similarity = tf.matmul(
+  similarity = tf.matmul(#valid_size词向量的大小embedding_size,vocabulary_size(-1~+1)
       valid_embeddings, normalized_embeddings, transpose_b=True)
+#transpose_b: 如果为真, b则在进行乘法计算前进行转置
 
   # Add variable initializer.
   init = tf.global_variables_initializer()
@@ -201,7 +203,7 @@ with tf.Session(graph=graph) as session:
   print('Initialized')
 
   average_loss = 0
-  for step in xrange(num_steps):
+  for step in xrange(num_steps):#batch random
     batch_inputs, batch_labels = generate_batch(
         batch_size, num_skips, skip_window)
     feed_dict = {train_inputs: batch_inputs, train_labels: batch_labels}
@@ -220,10 +222,11 @@ with tf.Session(graph=graph) as session:
 
     # Note that this is expensive (~20% slowdown if computed every 500 steps)
     if step % 10000 == 0:
-      sim = similarity.eval()
+      sim = similarity.eval()#把tf.Tensor转换为numpy array
       for i in xrange(valid_size):
         valid_word = reverse_dictionary[valid_examples[i]]
         top_k = 8  # number of nearest neighbors
+#数组值从小到大的索引值        负数top
         nearest = (-sim[i, :]).argsort()[1:top_k + 1]
         log_str = 'Nearest to %s:' % valid_word
         for k in xrange(top_k):
