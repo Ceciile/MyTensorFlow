@@ -1,3 +1,7 @@
+#!/usr/bin/env python2.7
+# -*- coding: utf-8 -*-
+#chinese
+
 # Copyright 2015 The TensorFlow Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,6 +16,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+#https://github.com/tensorflow/tensorflow/issues/10866
 """Basic word2vec example."""
 
 from __future__ import absolute_import
@@ -30,42 +35,16 @@ from six.moves import urllib
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
 
-# Step 1: Download the data.
-url = 'http://mattmahoney.net/dc/'
+# Step 1: get the data.
 
-
-# pylint: disable=redefined-outer-name
-def maybe_download(filename, expected_bytes):
-  """Download a file if not present, and make sure it's the right size."""
-  local_filename = os.path.join(gettempdir(), filename)
-  if not os.path.exists(local_filename):
-    local_filename, _ = urllib.request.urlretrieve(url + filename,
-                                                   local_filename)
-  statinfo = os.stat(local_filename)
-  if statinfo.st_size == expected_bytes:
-    print('Found and verified', filename)
-  else:
-    print(statinfo.st_size)
-    raise Exception('Failed to verify ' + local_filename +
-                    '. Can you get to it with a browser?')
-  return local_filename
-
-
-filename = maybe_download('text8.zip', 31344016)
-
-
-# Read the data into a list of strings.
-def read_data(filename):
-  """Extract the first file enclosed in a zip file as a list of words."""
-  with zipfile.ZipFile(filename) as f:
-    data = tf.compat.as_str(f.read(f.namelist()[0])).split()
-  return data
-
-vocabulary = read_data(filename)
+dataFile = open("belling_the_cat.txt", "r")
+vocabulary=tf.compat.as_str(dataFile.read()).split()
+dataFile.close() 
 print('Data size', len(vocabulary))
 
 # Step 2: Build the dictionary and replace rare words with UNK token.
-vocabulary_size = 50000
+vocabulary_size = 100#50000 =>if (150)line 247, in <module>
+    #close_word = reverse_dictionary[nearest[k]] KeyError: 121
 
 
 def build_dataset(words, n_words):
@@ -120,7 +99,9 @@ def generate_batch(batch_size, num_skips, skip_window):
       batch[i * num_skips + j] = buffer[skip_window]
       labels[i * num_skips + j, 0] = buffer[context_word]
     if data_index == len(data):
-      buffer[:] = data[:span]
+      #buffer[:] = data[:span]
+      for word in data[:span]:
+        buffer.append(word)#ERROR:sequence index must be integer, not 'slice'
       data_index = span
     else:
       buffer.append(data[data_index])
@@ -167,11 +148,13 @@ with graph.as_default():
         tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
     embed = tf.nn.embedding_lookup(embeddings, train_inputs)
 
-    # Construct the variables for the NCE loss
+    # Construct the variables for the NCE loss|logistic regression
     nce_weights = tf.Variable(
         tf.truncated_normal([vocabulary_size, embedding_size],
                             stddev=1.0 / math.sqrt(embedding_size)))
     nce_biases = tf.Variable(tf.zeros([vocabulary_size]))
+#The standard deviation of the truncated normal distribution
+#stddev: 一个零维张量或 类型属于dtype的Python值. 这个值决定正态分布片段的标准差
 
   # Compute the average NCE loss for the batch.
   # tf.nce_loss automatically draws a new sample of the negative labels each
@@ -201,7 +184,7 @@ with graph.as_default():
   init = tf.global_variables_initializer()
 
 # Step 5: Begin training.
-num_steps = 100001
+num_steps = 10001
 
 with tf.Session(graph=graph) as session:
   # We must initialize all variables before we use them.
@@ -266,11 +249,11 @@ try:
   import matplotlib.pyplot as plt
 
   tsne = TSNE(perplexity=30, n_components=2, init='pca', n_iter=5000, method='exact')
-  plot_only = 500
+  plot_only = 50#500 line 254 KeyError: 100
   low_dim_embs = tsne.fit_transform(final_embeddings[:plot_only, :])
   labels = [reverse_dictionary[i] for i in xrange(plot_only)]
-  plot_with_labels(low_dim_embs, labels, os.path.join(gettempdir(), 'tsne.png'))
-
+  plot_with_labels(low_dim_embs, labels,'tsne.png')
+#os.path.join(gettempdir(), 'tsne.png')
 except ImportError as ex:
   print('Please install sklearn, matplotlib, and scipy to show embeddings.')
-print(ex)
+  print(ex)

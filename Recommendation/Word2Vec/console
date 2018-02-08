@@ -1,0 +1,292 @@
+Data size 181
+Most common words (+UNK) [['UNK', 10], ('the', 11), ('and', 7), ('to', 6), ('said', 6)]
+Sample data [75, 80, 1, 30, 18, 5, 32, 96, 3, 36] ['long', 'ago', 'the', 'mice', 'had', 'a', 'general', 'council', 'to', 'consider']
+80 ago -> 1 the
+80 ago -> 75 long
+1 the -> 80 ago
+1 the -> 30 mice
+30 mice -> 1 the
+30 mice -> 18 had
+18 had -> 30 mice
+18 had -> 5 a
+2018-02-08 10:14:22.785837: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+Initialized
+Average loss at step  0 :  58.8438453674
+Nearest to neighbourhood: got, know, met, and, be, up, make, what,
+Nearest to treacherous: nobody, danger, what, consists, from, last, old, remedies,
+Nearest to their: this, propose, council, us, danger, should, always, had,
+Nearest to an: small, then, cat, danger, about, easy, bell, mice,
+Nearest to that: by, while, be, should, in, it, enemy, could,
+Nearest to retire: enemy, danger, young, old, remedies, this, their, UNK,
+Nearest to approach: manner, remedies, with, a, last, got, in, we,
+Nearest to then: spoke, an, small, at, all, to, UNK, agree,
+Nearest to easy: round, attached, consider, therefore, us, an, another, he,
+Nearest to and: know, round, neighbourhood, while, will, outwit, until, she,
+Nearest to ago: UNK, therefore, all, manner, old, will, with, retire,
+Nearest to know: and, always, from, neighbourhood, case, propose, round, treacherous,
+Nearest to with: approach, last, was, venture, case, they, signal, manner,
+Nearest to which: it, until, long, was, agree, nobody, we, with,
+Nearest to escape: at, who, looked, cat, will, treacherous, had, easy,
+Nearest to receive: is, impossible, while, means, retire, our, mouse, will,
+Average loss at step  2000 :  2.5184311862
+Average loss at step  4000 :  2.36973054516
+Average loss at step  6000 :  2.36403897667
+Average loss at step  8000 :  2.3599453721
+Average loss at step  10000 :  2.3551628027
+Nearest to neighbourhood: got, and, know, bell, up, be, old, met,
+Nearest to treacherous: nobody, what, danger, another, from, consists, last, old,
+Nearest to their: this, propose, us, should, council, danger, had, always,
+Nearest to an: then, small, cat, danger, about, outwit, we, easy,
+Nearest to that: it, while, should, by, be, in, propose, proposal,
+Nearest to retire: old, danger, young, enemy, ago, their, receive, this,
+Nearest to approach: manner, with, a, last, got, from, ago, we,
+Nearest to then: an, spoke, small, at, to, will, danger, all,
+Nearest to easy: round, consider, therefore, attached, an, us, another, council,
+Nearest to and: know, receive, will, neighbourhood, proposal, could, until, danger,
+Nearest to ago: UNK, old, sly, therefore, said, the, manner, all,
+Nearest to know: and, always, case, will, from, propose, neighbourhood, another,
+Nearest to with: approach, last, venture, was, they, case, ago, it,
+Nearest to which: it, was, until, agree, meet, we, nobody, consists,
+Nearest to escape: will, cat, at, who, looked, treacherous, had, easy,
+Nearest to receive: and, is, impossible, we, will, while, mouse, means,
+Average loss at step  12000 :  2.35309986222
+Average loss at step  14000 :  2.35141219497
+Average loss at step  16000 :  2.35153259861
+Average loss at step  18000 :  2.34942913544
+Average loss at step  20000 :  2.34706595147
+Nearest to neighbourhood: got, and, bell, said, old, know, up, be,
+Nearest to treacherous: nobody, what, another, danger, last, from, consists, said,
+Nearest to their: this, propose, us, council, should, danger, mouse, had,
+Nearest to an: then, small, cat, danger, about, we, outwit, bell,
+Nearest to that: it, should, proposal, while, agree, general, by, had,
+Nearest to retire: old, danger, young, enemy, ago, their, receive, this,
+Nearest to approach: manner, with, a, last, from, got, ago, we,
+Nearest to then: spoke, an, small, to, at, will, UNK, in,
+Nearest to easy: round, therefore, consider, attached, bell, council, an, us,
+Nearest to and: receive, proposal, know, will, danger, could, neighbourhood, we,
+Nearest to ago: UNK, old, sly, said, the, therefore, will, manner,
+Nearest to know: and, always, will, case, propose, from, neighbourhood, another,
+Nearest to with: approach, last, venture, was, a, they, case, ago,
+Nearest to which: was, it, until, agree, meet, bell, consists, the,
+Nearest to escape: cat, will, at, treacherous, looked, who, had, easy,
+Nearest to receive: and, is, impossible, we, will, mouse, while, means,
+Average loss at step  22000 :  2.34734917712
+Average loss at step  24000 :  2.34744317067
+Average loss at step  26000 :  2.3465021677
+Average loss at step  28000 :  2.34541249156
+Average loss at step  30000 :  2.34449207461
+Nearest to neighbourhood: and, bell, got, said, old, up, know, met,
+Nearest to treacherous: nobody, another, what, danger, said, last, from, consists,
+Nearest to their: this, propose, us, council, should, danger, mouse, had,
+Nearest to an: then, small, danger, cat, we, about, outwit, bell,
+Nearest to that: it, proposal, general, had, agree, should, who, impossible,
+Nearest to retire: old, danger, young, ago, enemy, their, receive, council,
+Nearest to approach: manner, with, a, last, from, got, ago, we,
+Nearest to then: spoke, an, small, to, at, in, will, UNK,
+Nearest to easy: round, therefore, consider, bell, attached, council, us, an,
+Nearest to and: receive, proposal, will, know, danger, we, neighbourhood, mouse,
+Nearest to ago: UNK, old, sly, said, the, therefore, will, manner,
+Nearest to know: always, and, will, case, propose, from, neighbourhood, another,
+Nearest to with: approach, last, venture, a, was, they, ago, it,
+Nearest to which: was, it, bell, agree, until, that, said, meet,
+Nearest to escape: cat, will, at, treacherous, looked, who, had, easy,
+Nearest to receive: and, is, we, impossible, will, mouse, while, had,
+Average loss at step  32000 :  2.34502189291
+Average loss at step  34000 :  2.34383040357
+Average loss at step  36000 :  2.34281579053
+Average loss at step  38000 :  2.34334733808
+Average loss at step  40000 :  2.34277246368
+Nearest to neighbourhood: bell, said, and, got, old, up, know, met,
+Nearest to treacherous: nobody, another, what, said, danger, last, from, consists,
+Nearest to their: this, us, propose, council, should, mouse, danger, had,
+Nearest to an: small, then, danger, we, cat, about, mouse, bell,
+Nearest to that: it, proposal, general, agree, had, who, impossible, should,
+Nearest to retire: old, danger, young, ago, enemy, their, receive, council,
+Nearest to approach: manner, with, a, last, got, from, we, ago,
+Nearest to then: spoke, an, small, in, at, to, will, cat,
+Nearest to easy: therefore, round, consider, bell, attached, council, us, all,
+Nearest to and: receive, proposal, will, mouse, danger, know, we, neighbourhood,
+Nearest to ago: UNK, old, sly, said, will, the, therefore, meet,
+Nearest to know: will, always, case, and, propose, from, her, neighbourhood,
+Nearest to with: a, approach, last, venture, was, they, ago, it,
+Nearest to which: was, bell, it, that, agree, said, until, meet,
+Nearest to escape: cat, will, at, treacherous, looked, who, had, easy,
+Nearest to receive: and, we, is, impossible, will, mouse, cat, UNK,
+Average loss at step  42000 :  2.34183361614
+Average loss at step  44000 :  2.34190473485
+Average loss at step  46000 :  2.34130019248
+Average loss at step  48000 :  2.34180139792
+Average loss at step  50000 :  2.3405480125
+Nearest to neighbourhood: bell, said, and, old, got, up, mice, met,
+Nearest to treacherous: nobody, another, said, what, danger, last, from, consists,
+Nearest to their: propose, us, council, this, should, mouse, danger, we,
+Nearest to an: small, then, danger, mouse, we, cat, about, bell,
+Nearest to that: it, proposal, general, had, agree, who, impossible, UNK,
+Nearest to retire: old, danger, young, ago, enemy, their, council, receive,
+Nearest to approach: manner, with, a, last, got, could, from, we,
+Nearest to then: spoke, an, small, in, to, cat, at, will,
+Nearest to easy: therefore, consider, round, bell, all, attached, council, us,
+Nearest to and: receive, proposal, will, mouse, danger, we, neighbourhood, know,
+Nearest to ago: old, UNK, sly, said, the, will, meet, cat,
+Nearest to know: will, always, case, and, propose, her, from, neighbourhood,
+Nearest to with: a, approach, last, venture, was, ago, it, they,
+Nearest to which: was, bell, it, said, that, agree, in, meet,
+Nearest to escape: cat, will, at, treacherous, looked, had, who, easy,
+Nearest to receive: and, we, is, impossible, said, cat, will, mouse,
+Average loss at step  52000 :  2.34067393064
+Average loss at step  54000 :  2.34088718152
+Average loss at step  56000 :  2.34176420963
+Average loss at step  58000 :  2.34035438752
+Average loss at step  60000 :  2.34192840207
+Nearest to neighbourhood: bell, said, and, old, got, mice, proposal, ago,
+Nearest to treacherous: nobody, another, said, what, last, danger, from, common,
+Nearest to their: propose, us, council, this, mouse, should, we, danger,
+Nearest to an: small, then, mouse, danger, we, about, cat, bell,
+Nearest to that: it, proposal, general, had, who, agree, impossible, which,
+Nearest to retire: old, danger, young, ago, enemy, their, council, receive,
+Nearest to approach: manner, with, a, could, last, got, we, from,
+Nearest to then: spoke, an, in, small, cat, at, to, will,
+Nearest to easy: therefore, consider, round, bell, all, attached, council, now,
+Nearest to and: receive, proposal, will, mouse, we, danger, neighbourhood, they,
+Nearest to ago: old, UNK, sly, cat, said, meet, the, will,
+Nearest to know: will, always, case, and, propose, her, from, could,
+Nearest to with: a, approach, last, venture, was, it, ago, they,
+Nearest to which: was, bell, said, that, it, in, agree, enemy,
+Nearest to escape: cat, will, at, looked, treacherous, had, propose, who,
+Nearest to receive: and, we, impossible, is, cat, said, will, mouse,
+Average loss at step  62000 :  2.34113984275
+Average loss at step  64000 :  2.34059194326
+Average loss at step  66000 :  2.33919648492
+Average loss at step  68000 :  2.33993189406
+Average loss at step  70000 :  2.33923659587
+Nearest to neighbourhood: bell, said, old, and, got, mice, proposal, ago,
+Nearest to treacherous: nobody, another, said, what, last, danger, from, consists,
+Nearest to their: propose, us, council, mouse, should, this, danger, we,
+Nearest to an: small, then, mouse, danger, we, about, bell, cat,
+Nearest to that: it, proposal, had, general, who, agree, impossible, UNK,
+Nearest to retire: old, danger, young, ago, enemy, their, council, receive,
+Nearest to approach: manner, with, a, could, last, got, we, from,
+Nearest to then: spoke, an, in, cat, small, at, to, will,
+Nearest to easy: therefore, consider, round, bell, all, attached, council, us,
+Nearest to and: receive, proposal, will, mouse, we, danger, they, neighbourhood,
+Nearest to ago: old, sly, UNK, cat, meet, will, the, said,
+Nearest to know: will, case, always, and, her, propose, from, to,
+Nearest to with: a, approach, last, venture, was, it, ago, easily,
+Nearest to which: bell, was, said, in, that, it, agree, enemy,
+Nearest to escape: cat, will, treacherous, looked, at, had, propose, easy,
+Nearest to receive: and, we, impossible, is, cat, said, will, easily,
+Average loss at step  72000 :  2.34013811767
+Average loss at step  74000 :  2.33965751827
+Average loss at step  76000 :  2.3382800082
+Average loss at step  78000 :  2.33914379215
+Average loss at step  80000 :  2.33954695487
+Nearest to neighbourhood: bell, old, and, said, got, proposal, mice, ago,
+Nearest to treacherous: nobody, another, said, what, last, could, danger, by,
+Nearest to their: propose, us, council, mouse, we, should, danger, this,
+Nearest to an: small, then, mouse, danger, we, about, the, bell,
+Nearest to that: it, had, proposal, who, impossible, general, agree, which,
+Nearest to retire: old, danger, young, ago, enemy, council, their, receive,
+Nearest to approach: manner, with, could, a, got, last, we, ago,
+Nearest to then: spoke, an, cat, in, small, enemy, sly, will,
+Nearest to easy: therefore, consider, round, bell, all, attached, council, proposal,
+Nearest to and: receive, proposal, will, mouse, we, they, danger, could,
+Nearest to ago: old, sly, cat, UNK, meet, will, the, neighbourhood,
+Nearest to know: will, always, case, and, her, propose, could, from,
+Nearest to with: a, approach, last, venture, was, it, ago, council,
+Nearest to which: bell, was, said, that, in, had, enemy, agree,
+Nearest to escape: cat, will, treacherous, looked, at, propose, had, easy,
+Nearest to receive: and, we, impossible, cat, is, said, easily, will,
+Average loss at step  82000 :  2.33825171638
+Average loss at step  84000 :  2.33842295074
+Average loss at step  86000 :  2.33941705108
+Average loss at step  88000 :  2.33933090961
+Average loss at step  90000 :  2.33761365223
+Nearest to neighbourhood: bell, said, old, and, proposal, mice, got, in,
+Nearest to treacherous: nobody, another, said, what, last, could, danger, this,
+Nearest to their: propose, us, council, mouse, should, danger, we, nobody,
+Nearest to an: small, mouse, then, danger, we, about, bell, the,
+Nearest to that: it, had, who, proposal, impossible, agree, general, mouse,
+Nearest to retire: old, danger, young, ago, council, their, enemy, could,
+Nearest to approach: manner, with, could, a, got, last, we, if,
+Nearest to then: spoke, in, cat, an, small, enemy, sly, agree,
+Nearest to easy: therefore, consider, all, bell, round, proposal, attached, council,
+Nearest to and: receive, proposal, will, mouse, they, danger, we, neighbourhood,
+Nearest to ago: old, cat, sly, meet, UNK, will, neighbourhood, said,
+Nearest to know: will, case, always, her, and, propose, to, from,
+Nearest to with: a, approach, last, council, venture, was, it, ago,
+Nearest to which: bell, was, in, said, that, had, enemy, agree,
+Nearest to escape: will, cat, treacherous, looked, at, had, propose, easy,
+Nearest to receive: and, we, cat, impossible, said, is, easily, will,
+Average loss at step  92000 :  2.33751117527
+Average loss at step  94000 :  2.33735902345
+Average loss at step  96000 :  2.33827302873
+Average loss at step  98000 :  2.33754882789
+Average loss at step  100000 :  2.33873204112
+Nearest to neighbourhood: bell, old, said, proposal, and, mice, by, got,
+Nearest to treacherous: nobody, another, said, what, last, could, danger, by,
+Nearest to their: propose, us, council, mouse, should, we, danger, always,
+Nearest to an: mouse, small, then, danger, about, we, bell, proposal,
+Nearest to that: it, had, impossible, who, proposal, general, agree, mouse,
+Nearest to retire: old, danger, young, ago, council, their, could, enemy,
+Nearest to approach: manner, with, could, a, got, last, if, we,
+Nearest to then: spoke, cat, in, an, small, enemy, bell, sly,
+Nearest to easy: therefore, all, consider, bell, round, proposal, attached, council,
+Nearest to and: receive, will, proposal, mouse, they, he, danger, we,
+Nearest to ago: old, cat, sly, meet, will, neighbourhood, UNK, which,
+Nearest to know: will, case, always, her, propose, and, to, could,
+Nearest to with: a, approach, last, council, proposal, it, venture, was,
+Nearest to which: bell, was, in, said, had, that, enemy, agree,
+Nearest to escape: will, cat, looked, treacherous, propose, had, easy, retire,
+Nearest to receive: and, we, cat, impossible, said, easily, is, will,
+=======================================================================
+Data size 181
+Most common words (+UNK) [['UNK', 10], ('the', 11), ('and', 7), ('to', 6), ('said', 6)]
+Sample data [75, 80, 1, 30, 18, 5, 32, 96, 3, 36] ['long', 'ago', 'the', 'mice', 'had', 'a', 'general', 'council', 'to', 'consider']
+80 ago -> 75 long
+80 ago -> 1 the
+1 the -> 30 mice
+1 the -> 80 ago
+30 mice -> 18 had
+30 mice -> 1 the
+18 had -> 30 mice
+18 had -> 5 a
+2018-02-08 11:17:06.894562: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+Initialized
+Average loss at step  0 :  54.7936630249
+Nearest to last: enemy, this, manner, general, spoke, that, sly, consists,
+Nearest to venture: he, be, consists, who, mouse, with, looked, met,
+Nearest to be: he, will, receive, venture, if, sly, then, had,
+Nearest to their: would, while, it, round, that, neighbourhood, case, agree,
+Nearest to receive: be, another, had, enemy, general, with, he, venture,
+Nearest to could: some, long, about, sly, is, had, agree, one,
+Nearest to it: retire, while, their, consider, approach, approaches, now, of,
+Nearest to consider: UNK, always, met, our, it, looked, spoke, we,
+Nearest to applause: got, impossible, another, a, very, signal, nobody, easy,
+Nearest to therefore: agree, cat, treacherous, meet, he, one, and, long,
+Nearest to had: small, manner, a, attached, could, impossible, to, case,
+Nearest to by: said, very, know, outwit, her, he, then, got,
+Nearest to to: approach, then, should, very, had, mice, which, that,
+Nearest to easily: treacherous, escape, at, UNK, her, bell, will, manner,
+Nearest to got: her, a, applause, that, mice, looked, said, very,
+Nearest to UNK: consider, proposal, spoke, easily, manner, consists, us, another,
+Average loss at step  2000 :  2.52345378733
+Average loss at step  4000 :  2.37044040179
+Average loss at step  6000 :  2.36280832851
+Average loss at step  8000 :  2.35855443656
+Average loss at step  10000 :  2.35496099925
+Nearest to last: enemy, general, manner, spoke, that, this, ribbon, sly,
+Nearest to venture: he, be, mouse, met, with, who, make, consists,
+Nearest to be: he, will, the, venture, receive, then, sly, if,
+Nearest to their: would, while, enemy, round, it, bell, sly, neighbourhood,
+Nearest to receive: and, be, another, signal, enemy, UNK, said, with,
+Nearest to could: sly, about, some, one, what, our, is, agree,
+Nearest to it: retire, while, agree, their, should, nobody, approach, now,
+Nearest to consider: UNK, met, always, council, our, looked, we, which,
+Nearest to applause: got, impossible, a, another, signal, very, nobody, enemy,
+Nearest to therefore: agree, treacherous, bell, meet, cat, make, one, propose,
+Nearest to had: small, manner, a, ribbon, attached, case, ago, last,
+Nearest to by: said, outwit, very, know, then, some, young, her,
+Nearest to to: approach, then, very, should, but, would, now, know,
+Nearest to easily: treacherous, UNK, at, escape, bell, will, manner, with,
+Nearest to got: her, applause, said, a, mice, looked, that, very,
+Nearest to UNK: consider, easily, up, was, consists, spoke, treacherous, nobody,
