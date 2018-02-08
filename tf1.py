@@ -21,6 +21,7 @@ result = tf.multiply(x1, x2)
 #print(result) Tensor("Mul:0", shape=(4,), dtype=int32)
 
 #run this code in an interactive session
+#在被称之为 会话 (Session) 的上下文 (context) 中执行图
 '''
 # Intialize the Session
 sess = tf.Session()
@@ -31,7 +32,8 @@ print(sess.run(result))
 # Close the session
 sess.close()
 '''
-# Initialize Session and run `result`
+# Initialize Session and run `result` "with" 代码块 来自动完成关闭
 with tf.Session() as sess:
-  output = sess.run(result)
-  print(output)
+  with tf.device('/cpu:0'):
+    output = sess.run(result)
+    print(output)

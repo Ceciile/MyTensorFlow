@@ -16,6 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
+"""
+Modified on 7th Feb 2018
+
+@author: Qianqian
+"""
 #https://github.com/tensorflow/tensorflow/issues/10866
 """Basic word2vec example."""
 
@@ -51,10 +56,11 @@ def build_dataset(words, n_words):
   """Process raw inputs into a dataset."""
   count = [['UNK', -1]]
   count.extend(collections.Counter(words).most_common(n_words - 1))
+#count : ['UNK',-1] + top(n_words-1)*['mot',nb]
   dictionary = dict()
   for word, _ in count:
-    dictionary[word] = len(dictionary)
-  data = list()
+    dictionary[word] = len(dictionary)#MAJ index:+1
+  data = list()#index
   unk_count = 0
   for word in words:
     index = dictionary.get(word, 0)
@@ -66,9 +72,9 @@ def build_dataset(words, n_words):
   return data, count, dictionary, reversed_dictionary
 
 # Filling 4 global variables:
-# data - list of codes (integers from 0 to vocabulary_size-1).
+# data - list of codes (integers from 0 to vocabulary_size-1).   INDEX
 #   This is the original text but words are replaced by their codes
-# count - map of words(strings) to count of occurrences
+# count - map of words(strings) to count of occurrences    (TermFrequence)
 # dictionary - map of words(strings) to their codes(integers)
 # reverse_dictionary - maps codes(integers) to words(strings)
 data, count, dictionary, reverse_dictionary = build_dataset(vocabulary,
@@ -80,24 +86,27 @@ print('Sample data', data[:10], [reverse_dictionary[i] for i in data[:10]])
 data_index = 0
 
 # Step 3: Function to generate a training batch for the skip-gram model.
+#batch批尺寸 size个样本词;window size +/- contexte
+#对于一个中心词 在window范围 随机选取 num_skips个词，产生一系列
 def generate_batch(batch_size, num_skips, skip_window):
-  global data_index
+  global data_index #assert判断语句或表达式的正确性
   assert batch_size % num_skips == 0
   assert num_skips <= 2 * skip_window
   batch = np.ndarray(shape=(batch_size), dtype=np.int32)
   labels = np.ndarray(shape=(batch_size, 1), dtype=np.int32)
   span = 2 * skip_window + 1  # [ skip_window target skip_window ]
-  buffer = collections.deque(maxlen=span)
+  buffer = collections.deque(maxlen=span)#双端队列
   if data_index + span > len(data):
     data_index = 0
   buffer.extend(data[data_index:data_index + span])
   data_index += span
-  for i in range(batch_size // num_skips):
+  for i in range(batch_size // num_skips):#商的整数部分
     context_words = [w for w in range(span) if w != skip_window]
     words_to_use = random.sample(context_words, num_skips)
-    for j, context_word in enumerate(words_to_use):
+#从序列context_words中选择num_skips个随机且独立的元素
+    for j, context_word in enumerate(words_to_use):#组合为一个索引序列
       batch[i * num_skips + j] = buffer[skip_window]
-      labels[i * num_skips + j, 0] = buffer[context_word]
+      labels[i * num_skips + j, 0] = buffer[context_word]#target range in span-1
     if data_index == len(data):
       #buffer[:] = data[:span]
       for word in data[:span]:
@@ -117,8 +126,8 @@ for i in range(8):
 
 # Step 4: Build and train a skip-gram model.
 
-batch_size = 128
-embedding_size = 128  # Dimension of the embedding vector.
+batch_size = 128      # 每次sgd训练时候扫描的数据大小
+embedding_size = 128  # Dimension of the embedding vector.词向量的大小
 skip_window = 1       # How many words to consider left and right.
 num_skips = 2         # How many times to reuse an input to generate a label.
 num_sampled = 64      # Number of negative examples to sample.
@@ -131,7 +140,7 @@ valid_size = 16     # Random set of words to evaluate similarity on.
 valid_window = 100  # Only pick dev samples in the head of the distribution.
 valid_examples = np.random.choice(valid_window, valid_size, replace=False)
 
-
+#使用图 (graph) 来表示计算任务
 graph = tf.Graph()
 
 with graph.as_default():
@@ -247,7 +256,7 @@ try:
   # pylint: disable=g-import-not-at-top
   from sklearn.manifold import TSNE
   import matplotlib.pyplot as plt
-
+#降维到2元
   tsne = TSNE(perplexity=30, n_components=2, init='pca', n_iter=5000, method='exact')
   plot_only = 50#500 line 254 KeyError: 100
   low_dim_embs = tsne.fit_transform(final_embeddings[:plot_only, :])
